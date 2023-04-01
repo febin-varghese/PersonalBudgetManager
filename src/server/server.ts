@@ -7,8 +7,10 @@ dotenv.config();
 const app: Express = express();
 const port = process.env.PORT ?? 8000;
 
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', (req: Request, res: Response) => {
-  const rootFilePath = join(__dirname, '../index.html');
+  const rootFilePath = join(__dirname, '/public/pages/index.html');
   res.sendFile(rootFilePath);
 });
 
