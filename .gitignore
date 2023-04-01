@@ -1,2 +1,2 @@
-.idea/
-*.pyc
+yarn.lock
+node_modules

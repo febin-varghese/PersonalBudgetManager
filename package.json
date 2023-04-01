@@ -1,0 +1,11 @@
+{
+  "name": "PersonalBudgetManager",
+  "version": "1.0.0",
+  "main": "src/index.html",
+  "repository": "git@github.com:febin-varghese/PersonalBudgetManager.git",
+  "author": "Febin <febinvarghese994@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
