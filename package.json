@@ -16,7 +16,9 @@
   "scripts": {
     "start": "nodemon src/server/server.ts",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "prepare": "husky install",
+    "test": ""
   },
   "husky": {
     "hooks": {
@@ -28,6 +30,7 @@
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.7"
+    "prettier": "^2.8.7",
+    "husky": "^8.0.0"
   }
 }
