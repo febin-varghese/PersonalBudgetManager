@@ -1,5 +1,5 @@
 {
-  "name": "PersonalBudgetManager",
+  "name": "personal-budget-manager",
   "version": "1.0.0",
   "main": "src/index.html",
   "repository": "git@github.com:febin-varghese/PersonalBudgetManager.git",
@@ -14,7 +14,7 @@
     "typescript": "^5.0.3"
   },
   "scripts": {
-    "start": "nodemon src/server/server.ts",
+    "start": "nodemon --watch 'src/server/**/*' src/server/server.ts",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "lint": "eslint . --ext .ts",
     "prepare": "husky install",
