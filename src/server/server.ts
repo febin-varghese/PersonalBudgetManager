@@ -1,5 +1,5 @@
 import express, { Express, Request, Response } from 'express';
-import { join, resolve } from 'path';
+import { join } from 'path';
 import dotenv from 'dotenv';
 
 dotenv.config();
