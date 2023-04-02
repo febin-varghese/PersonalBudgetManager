@@ -10,12 +10,12 @@ const port = process.env.PORT ?? 8000;
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req: Request, res: Response) => {
-  const rootFilePath = join(__dirname, '/public/pages/index.html');
+  const rootFilePath = join(__dirname, '/index.html');
   res.sendFile(rootFilePath);
 });
 
 app.get('*', (req: Request, res: Response) => {
-  const rootFilePath = resolve(__dirname, '.html');
+  const rootFilePath = join(__dirname, '/public/404.html');
   res.status(404).sendFile(rootFilePath);
 });
 
