@@ -1,5 +1,5 @@
 import express, { Express, Request, Response } from 'express';
-import { join } from 'path';
+import { join, resolve } from 'path';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -14,6 +14,11 @@ app.get('/', (req: Request, res: Response) => {
   res.sendFile(rootFilePath);
 });
 
+app.get('*', (req: Request, res: Response) => {
+  const rootFilePath = resolve(__dirname, '.html');
+  res.status(404).sendFile(rootFilePath);
+});
+
 app.listen(port, () => {
-  console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
 });
