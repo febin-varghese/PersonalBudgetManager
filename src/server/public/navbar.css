@@ -1,0 +1,25 @@
+.header {
+  background: none;
+  display: block;
+}
+.header-logo {
+  display: block;
+  outline: none;
+  padding: 4px;
+  margin: -4px;
+}
+.header-logoLink {
+  color: #2a9d8f;
+}
+.navbar-list {
+  display: flex;
+  list-style: none;
+}
+.navbar-item-list {
+  color: #e9c46a;
+  margin-right: 20px;
+
+}
+a {
+  text-decoration: none;
+}
