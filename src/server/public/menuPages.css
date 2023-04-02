@@ -1,3 +1,10 @@
+body {
+  background-color: #95B8D1;
+}
+h1{
+  color: #750D37;
+  text-align: center;
+}
 .button {
   display: inline-block;
   background-color: #333;
@@ -16,11 +23,11 @@
 .statistic {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #ccc;
+  border: 1px solid #FB3640;
   padding: 20px;
   border-radius: 5px;
   margin-top: 20px;
-  background-color: #2196f3;
+  background-color: #6C7D47;
 }
 
 .statistic-item {
@@ -34,7 +41,7 @@
 }
 
 .statistic strong {
-  color: #fff;
+  color: #ccc;
 }
 
 .statistic-item:nth-child(1) p {
