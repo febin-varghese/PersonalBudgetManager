@@ -1,8 +1,8 @@
 body {
-  background-color: #95B8D1;
+  background-color: #95b8d1;
 }
-h1{
-  color: #750D37;
+.menuPage-header {
+  color: #750d37;
   text-align: center;
 }
 .button {
@@ -23,11 +23,11 @@ h1{
 .statistic {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #FB3640;
+  border: 1px solid #fb3640;
   padding: 20px;
   border-radius: 5px;
   margin-top: 20px;
-  background-color: #6C7D47;
+  background-color: #6c7d47;
 }
 
 .statistic-item {
@@ -50,4 +50,29 @@ h1{
 
 .statistic-item:nth-child(2) p {
   font-size: 24px;
+}
+
+canvas {
+  background-color: #333;
+  width: 100%;
+}
+
+.chart-container {
+  width: 80%;
+  height: 20%;
+  margin: auto;
+}
+
+.chart-container h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 36px;
+  margin-top: 40px;
+}
+
+.chart-container p {
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 40px;
 }

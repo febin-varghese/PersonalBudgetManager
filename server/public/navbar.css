@@ -1,6 +1,7 @@
 .header {
-  background: none;
+  background: url('https://cdn.pixabay.com/photo/2016/08/03/09/04/universe-1566161_960_720.jpg');
   display: block;
+  background-size: 100% auto;
 }
 .header-logo {
   display: block;
@@ -11,6 +12,9 @@
 .header-logoLink {
   color: #2a9d8f;
 }
+/* .navbar-container {
+  background-color: #123456;
+} */
 .navbar-list {
   display: flex;
   list-style: none;
