@@ -3,13 +3,14 @@ import { resolve } from 'path';
 import { parse } from 'fast-csv';
 import { Income } from './interfaces/income';
 import { getDataPath } from './utilities/common';
+import { Expense } from './interfaces/expense';
 
 export async function readDataFromCSV(
   filePath: string
-): Promise<Array<Income>> {
+): Promise<Array<Income | Expense>> {
   // TODO: sample data
   const fullPath = resolve(__dirname, getDataPath(), `${filePath}.csv`);
-  const data: Income[] = [];
+  const data: (Income | Expense)[] = [];
   const readStream = createReadStream(fullPath).pipe(
     parse({ headers: true, delimiter: ';' })
   );

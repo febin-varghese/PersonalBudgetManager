@@ -3,6 +3,7 @@ import bodyparser from 'body-parser';
 import { join } from 'path';
 import dotenv from 'dotenv';
 import { getIncomeData } from './src/income';
+import { getExpenseData } from './src/expense';
 
 dotenv.config();
 
@@ -15,6 +16,10 @@ app.use(express.static(__dirname + '/public'));
 // Data APIs
 app.get('/api/v1/income', async (req: Request, res: Response) => {
   const data = await getIncomeData();
+  res.json(data);
+});
+app.get('/api/v1/expense', async (req: Request, res: Response) => {
+  const data = await getExpenseData();
   res.json(data);
 });
 

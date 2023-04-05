@@ -4,8 +4,8 @@ export interface Income {
   date: Date;
   currency: string;
   amount: number;
-  category: IncomeCategory; // TODO:
-  type: MoneyType; // TODO:
+  category: IncomeCategory;
+  type: MoneyType;
   comment: string;
 }
 

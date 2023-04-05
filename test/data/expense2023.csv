@@ -1,0 +1,7 @@
+date;currency;quantity;rate;amount;category;subCategory;type;comment
+01/01/2023;EUR;1;100;100;meals;food;cash;test data
+02/01/2023;EUR;1;50;50;entertainment;cinema;cash;test data
+02/02/2023;EUR;1;100;100;meals;companyFood;cash;test data
+02/03/2023;EUR;1;100;100;meals;companyFood;cash;test data
+02/04/2023;EUR;1;25;25;meals;companyFood;cash;test data
+03/04/2023;EUR;1;25;25;meals;companyFood;cash;test data
