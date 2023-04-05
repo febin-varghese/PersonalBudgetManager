@@ -1,22 +1,22 @@
-import { readDataFromCSV } from './dataProcressor';
+import { readDataFromCSV } from './dataProcessor';
+import { months } from './utilData';
 
 export async function getIncomeData(): Promise<unknown> {
-  const incomeData = readDataFromCSV('income');
+  const incomeData = await readDataFromCSV('income'); // TODO: save in a separate file for different years
+  const currentYear = new Date().getFullYear();
+  const monthlyIncome: number[] = [];
+  for (const income of incomeData) {
+    const date = new Date(income.date);
+    const year = date.getFullYear();
+    if (year === currentYear) {
+      const month = date.getMonth();
+      const currentIncomeInTheMonth = monthlyIncome[month] ?? 0;
+      monthlyIncome[month] =
+        currentIncomeInTheMonth + Number(income?.amount ?? 0);
+    }
+  }
   return {
-    months: [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec'
-    ],
-    amount: [120, 190, 300, 500, 700, 900, 1000, 1100]
+    months,
+    amount: monthlyIncome
   };
 }
