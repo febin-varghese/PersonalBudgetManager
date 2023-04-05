@@ -2,8 +2,8 @@ import { readDataFromCSV } from './dataProcessor';
 import { months } from './utilData';
 
 export async function getIncomeData(): Promise<unknown> {
-  const incomeData = await readDataFromCSV('income'); // TODO: save in a separate file for different years
   const currentYear = new Date().getFullYear();
+  const incomeData = await readDataFromCSV(`income${currentYear}`);
   const monthlyIncome: number[] = [];
   for (const income of incomeData) {
     const date = new Date(income.date);
