@@ -1,0 +1,14 @@
+date;currency;amount;category;type;comment
+01/01/2023;EUR;1000;salary;cash;test data
+02/01/2023;EUR;1000;salary;cash;test data
+03/01/2023;EUR;1000;salary;cash;test data
+04/01/2023;EUR;1000;salary;cash;test data
+05/01/2023;EUR;1000;salary;cash;test data
+06/01/2023;EUR;1000;salary;cash;test data
+07/01/2023;EUR;1000;salary;cash;test data
+08/01/2023;EUR;1000;salary;cash;test data
+09/01/2023;EUR;1000;salary;cash;test data
+10/01/2023;EUR;1000;salary;cash;test data
+11/01/2023;EUR;1000;salary;cash;test data
+12/01/2023;EUR;1000;salary;cash;test data
+12/15/2023;EUR;250;bonus;cash;test data
