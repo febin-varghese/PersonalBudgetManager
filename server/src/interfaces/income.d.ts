@@ -1,6 +1,6 @@
 import { MoneyType } from './common';
 
-export interface Income {
+export interface IncomeInterface {
   date: Date;
   currency: string;
   amount: number;

@@ -1,7 +1,7 @@
 import { MoneyType } from './common';
 import { IncomeCategory } from './income';
 
-export interface Expense {
+export interface ExpenseInterface {
   date: Date;
   currency: string;
   amount: number;
