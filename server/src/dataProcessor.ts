@@ -12,11 +12,10 @@ export async function readDataFromCSV<T>(filePath: string): Promise<Array<T>> {
   );
   // https://stackoverflow.com/questions/33599688/how-to-use-es8-async-await-with-streams
   const readStreamPromise = new Promise(function (resolve, reject) {
-    readStream.on('data', (row) => resolve(data.push(row)));
-    readStream.on('error', reject);
-    readStream.on('end', (rowCount: number) =>
-      console.log(`Parsed ${rowCount} ${rowCount === 1 ? 'row' : 'rows'}`)
-    );
+    readStream.on('data', (row) => resolve(data.push(row))).on('error', reject);
+    // .on('end', (rowCount: number) =>
+    //   console.log(`Parsed ${rowCount} ${rowCount === 1 ? 'row' : 'rows'}`)
+    // );
   });
   await readStreamPromise;
   return data;

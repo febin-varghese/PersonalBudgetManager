@@ -2,7 +2,7 @@ import express, { Express, Request, Response } from 'express';
 import bodyparser from 'body-parser';
 import { join } from 'path';
 import dotenv from 'dotenv';
-import { getIncomeData } from './src/income';
+import { getIncomeData } from './src/income/income';
 import { getExpenseData } from './src/expense';
 
 dotenv.config();
