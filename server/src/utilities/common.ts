@@ -13,3 +13,11 @@ export function getDataPath(): string {
       throw Error(`${environment} is invalid environment configuration`);
   }
 }
+
+export function convertMonthStringToNumber(month: string): number {
+  var d = Date.parse(month + '1, 2012');
+  if (!isNaN(d)) {
+    return new Date(d).getMonth() + 1;
+  }
+  return -1;
+}
