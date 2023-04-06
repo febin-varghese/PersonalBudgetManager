@@ -43,15 +43,15 @@ export class Income {
     return monthlyIncome;
   }
 
-  async calculateYearlyIncome(year: number): Promise<number> {
-    let yearlyIncome = 0;
+  async calculateAnnualIncome(year: number): Promise<number> {
+    let annualIncome = 0;
     for (const income of this.income) {
       const date = new Date(income.date);
       if (year === date.getFullYear()) {
-        yearlyIncome += Number(income?.amount ?? 0);
+        annualIncome += Number(income?.amount ?? 0);
       }
     }
-    return yearlyIncome;
+    return annualIncome;
   }
 }
 
