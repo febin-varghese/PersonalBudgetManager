@@ -17,7 +17,7 @@
   "scripts": {
     "start": "nodemon --watch 'server/**/*' server/server.ts",
     "prettier-format": "prettier --config .prettierrc 'server/*.ts' --write",
-    "lint": "eslint . --ext .ts",
+    "lint": "eslint --ext '.js,.ts' --fix --cache",
     "prepare": "husky install",
     "test": "jest"
   },
