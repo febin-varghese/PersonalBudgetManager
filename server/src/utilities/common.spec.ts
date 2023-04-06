@@ -20,7 +20,7 @@ describe('common/getDataPath', () => {
     ['testing', '../../test/data/']
   ];
   it.each(environments)(
-    'should return proper data path for the set environment',
+    'should return proper data path for the set environment: %s',
     (environment, dataPath) => {
       process.env = { ...process.env, environment };
       expect(getDataPath()).toBe(dataPath);
@@ -36,9 +36,9 @@ describe('common/convertMonthStringToNumber', () => {
   const testData: [string, number][] = months.map((monthString, index) => [
     monthString,
     index + 1
-  ]);
+  ]); // TODO: Full string test as well
   it.each(testData)(
-    'should return proper data path for the set environment',
+    'should convert textual month to numeric month: %s',
     (monthString, monthNumber) => {
       expect(convertMonthStringToNumber(monthString)).toBe(monthNumber);
     }
