@@ -14,10 +14,15 @@ app.use(bodyparser.json());
 app.use(express.static(__dirname + '/public'));
 
 // Data APIs
-app.get('/api/v1/income', async (req: Request, res: Response) => {
-  const data = await getIncomeData();
+app.get('/api/v1/income/:year', async (req: Request, res: Response) => {
+  const { params } = req;
+  const requestedYear = !isNaN(Number(params.year))
+    ? Number(params.year)
+    : new Date().getFullYear();
+  const data = await getIncomeData(requestedYear);
   res.json(data);
 });
+
 app.get('/api/v1/expense', async (req: Request, res: Response) => {
   const data = await getExpenseData();
   res.json(data);

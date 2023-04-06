@@ -17,7 +17,7 @@ function renderChart(months, amount) {
 }
 
 async function fetchData() {
-  const response = await fetch('http://localhost:5000/api/v1/income');
+  const response = await fetch('http://localhost:5000/api/v1/income/2023');
   const { months, amount } = await response.json();
   // Use the data to create the chart using Chart.js
   renderChart(months, amount);
