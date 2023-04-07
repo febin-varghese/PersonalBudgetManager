@@ -12,3 +12,18 @@ export const months = [
   'Nov',
   'Dec'
 ];
+
+export const monthsFullNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+];

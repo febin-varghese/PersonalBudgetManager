@@ -1,4 +1,4 @@
-import { months } from '../utilData';
+import { months, monthsFullNames } from '../utilData';
 import { convertMonthStringToNumber, getDataPath } from './common';
 
 describe('common/getDataPath', () => {
@@ -36,11 +36,20 @@ describe('common/convertMonthStringToNumber', () => {
   const testData: [string, number][] = months.map((monthString, index) => [
     monthString,
     index + 1
-  ]); // TODO: Full string test as well
+  ]);
   it.each(testData)(
     'should convert textual month to numeric month: %s',
     (monthString, monthNumber) => {
       expect(convertMonthStringToNumber(monthString)).toBe(monthNumber);
+    }
+  );
+  const fullNameTestData: [string, number][] = monthsFullNames.map(
+    (fullName, index) => [fullName, index + 1]
+  );
+  it.each(fullNameTestData)(
+    'should convert textual month to numeric month: %s',
+    (fullName, monthNumber) => {
+      expect(convertMonthStringToNumber(fullName)).toBe(monthNumber);
     }
   );
 });
